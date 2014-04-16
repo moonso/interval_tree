@@ -14,11 +14,11 @@ import os
 import tempfile
 import pytest
 
-from genmod.utils.interval_tree import IntervalTree
+from interval_tree.interval_tree import IntervalTree
 
 
-class TestAnnotationParser(object):
-    """Test class for testing how the genetic models behave with combinations of compound variants."""
+class TestIntervalTree(object):
+    """Test class for testing how the interval tree behaves.."""
 
     def setup_class(self):
         """Setup different interval trees and check if they behave correct"""
