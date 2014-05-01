@@ -4,14 +4,10 @@ except ImportError:
     from distutils.core import setup
     
 # For making things look nice on pypi:
-try:
-    import pypandoc
-    long_description = pypandoc.convert('README.md', 'rst')
-except (IOError, ImportError):
-    long_description = 'Python implemetation of the interval tree.'
+long_description = 'Python implemetation of the interval tree.'
 
 setup(name='interval_tree',
-    version='0.1',
+    version='0.2',
     description='Python implemetation of the interval tree',
     author = 'Mans Magnusson',
     author_email = 'mans.magnusson@scilifelab.se',
