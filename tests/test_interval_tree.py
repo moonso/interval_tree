@@ -24,6 +24,8 @@ class TestIntervalTree(object):
         """Setup different interval trees and check if they behave correct"""
         # Setup family with sick kid, sick father and healthy mother:
         # This should behave such that pos 1 and 2 are covered by the interval:
+        empty_interval = [0,0,None]
+        self.empty_tree = IntervalTree([empty_interval],0,0)
         smallest_interval = [1,1,'id_01']
         self.simplest_tree = IntervalTree([smallest_interval],1, 2)
         small_interval = [1,2,'id_02']
@@ -32,6 +34,10 @@ class TestIntervalTree(object):
         interval_4 = [16,40,'id_04']
         self.tree = IntervalTree([interval_3, interval_4],1, 50)
          
+    
+    def test_empty_tree(self):
+        """Test if empty trees behave as suspected."""
+        assert self.empty_tree.find_range([3,3]) == []
     
     def test_basic_tree_functions(self):
         """Check so that the tree class behave as expected."""
