@@ -35,7 +35,10 @@ class TestIntervalTree(object):
         self.tree = IntervalTree([interval_3, interval_4],1, 50)
         interval_5 = [10,20,'id_05']
         interval_6 = [10,20,'id_06']
-        self.ovelapping_tree = IntervalTree([interval_5, interval_6],1, 50)
+        interval_7 = [10,20,'id_06']
+        self.ovelapping_tree = IntervalTree([interval_5, interval_6, interval_7],1, 50)
+        interval_8 = (10,20,'id_08')
+        self.tuple_tree = IntervalTree([interval_8],1, 50)
          
     
     def test_empty_tree(self):
@@ -78,6 +81,9 @@ class TestIntervalTree(object):
         """Test interval_tree two almost identical intervals."""
         assert set(self.ovelapping_tree.find_range([15,15])) == set(['id_05', 'id_06'])
     
+    def test_tuple_tree(self):
+        """Test if tuples are compatible with interval trees."""
+        assert set(self.tuple_tree.find_range([15,15])) == set(['id_08'])
 
 def main():
     pass
