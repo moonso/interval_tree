@@ -7,7 +7,7 @@ except ImportError:
 long_description = 'Python implemetation of the interval tree.'
 
 setup(name='interval_tree',
-    version='0.3',
+    version='0.3.1',
     description='Python implemetation of the interval tree',
     author = 'Mans Magnusson',
     author_email = 'mans.magnusson@scilifelab.se',

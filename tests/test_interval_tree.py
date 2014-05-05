@@ -33,6 +33,9 @@ class TestIntervalTree(object):
         interval_3 = [10,20,'id_03']
         interval_4 = [16,40,'id_04']
         self.tree = IntervalTree([interval_3, interval_4],1, 50)
+        interval_5 = [10,20,'id_05']
+        interval_6 = [10,20,'id_06']
+        self.ovelapping_tree = IntervalTree([interval_5, interval_6],1, 50)
          
     
     def test_empty_tree(self):
@@ -70,6 +73,11 @@ class TestIntervalTree(object):
         assert set(self.tree.find_range([30,30])) == set(['id_04'])
         assert set(self.tree.find_range([30,30])) == set(['id_04'])
         assert set(self.tree.find_range([42,42])) == set([])
+    
+    def test_overlapping_tree(self):
+        """Test interval_tree two almost identical intervals."""
+        assert set(self.ovelapping_tree.find_range([15,15])) == set(['id_05', 'id_06'])
+    
 
 def main():
     pass
