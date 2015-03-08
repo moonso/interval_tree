@@ -195,9 +195,24 @@ class IntervalTree:
         """pretty prints the tree with indentation"""
         pp = pprint.PrettyPrinter(indent=ind)
         pp.pprint(self.tree)
+    
+    def __repr__(self):
+        return "IntervalTree(start={0}, stop={1})".format(
+            self.start,
+            self.stop
+        )
 
 def main():
-    features = [[20,400,'id01'], [20,400,'id12'], [500,700,'id01'], [1020,2400,'id02'], [35891,29949,'id03'], [899999,900000,'id04'], [999000,999000,'id05']]
+    features = [
+        [20,400,'id01'], 
+        [20,400,'id12'], 
+        [500,700,'id01'], 
+        [1020,2400,'id02'], 
+        [35891,29949,'id03'], 
+        [899999,900000,'id04'], 
+        [999000,999000,'id05']
+    ]
+    
     my_tree = IntervalTree(features, 1, 1000000)
     my_tree.pprint(4)
     print('Ranges between 200 and 1200: %s' % my_tree.find_range([200, 1200]))

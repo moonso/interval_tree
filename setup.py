@@ -7,15 +7,21 @@ except ImportError:
 long_description = 'Python implemetation of the interval tree.'
 
 setup(name='interval_tree',
-    version='0.3.1',
+    version='0.3.2',
     description='Python implemetation of the interval tree',
     author = 'Mans Magnusson',
     author_email = 'mans.magnusson@scilifelab.se',
     url = 'http://github.com/moonso/interval_tree',
     license = 'MIT License',
-    install_requires=['pytest'],
-    packages = ['interval_tree'],
-    keywords = ['interval tree'],
+    install_requires=[
+        'pytest'
+    ],
+    packages = [
+        'interval_tree'
+    ],
+    keywords = [
+        'interval tree'
+    ],
     classifiers = [
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
