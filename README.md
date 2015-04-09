@@ -38,8 +38,8 @@ print('Ranges between 200 and 1200: %s' % my_tree.find_range([200, 1200]))
 >Ranges between 200 and 1200: ['id01', 'id02', 'id03']
 
 print('Range in only position 90000: %s'  % my_tree.find_range([900000, 900000]))
-Range in only position 90000: ['id04']
+>Range in only position 90000: ['id04']
 
 print('Range in only position 300: %s'  % my_tree.find_range([300, 300]))
-Range in only position 300: ['id01', 'id02']
+>Range in only position 300: ['id01', 'id02']
 ```
