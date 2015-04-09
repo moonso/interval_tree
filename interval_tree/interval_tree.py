@@ -205,19 +205,19 @@ class IntervalTree:
 def main():
     features = [
         [20,400,'id01'], 
-        [20,400,'id12'], 
-        [500,700,'id01'], 
-        [1020,2400,'id02'], 
-        [35891,29949,'id03'], 
-        [899999,900000,'id04'], 
-        [999000,999000,'id05']
+        [30,300,'id02'], 
+        [500,700,'id03'], 
+        [1020,2400,'id04'], 
+        [35891,29949,'id05'], 
+        [899999,900000,'id06'], 
+        [999000,999000,'id07']
     ]
     
     my_tree = IntervalTree(features, 1, 1000000)
     my_tree.pprint(4)
-    print('Ranges between 200 and 1200: %s' % my_tree.find_range([200, 1200]))
-    print('Range in only position 90000: %s'  % my_tree.find_range([900000, 900000]))
-    print('Range in only position 300: %s'  % my_tree.find_range([300, 300]))
+    print('Ranges between 200 and 1200: {0}'.format(my_tree.find_range([200, 1200])))
+    print('Range in only position 90000: {0}'.format(my_tree.find_range([900000, 900000])))
+    print('Range in only position 300: {0}'.format(my_tree.find_range([300, 300])))
 
 
 if __name__ == '__main__':
