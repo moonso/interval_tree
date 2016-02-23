@@ -197,9 +197,9 @@ class IntervalTree:
         pp.pprint(self.tree)
     
     def __repr__(self):
-        return "IntervalTree(start={0}, stop={1})".format(
+        return "IntervalTree(start={0}, end={1})".format(
             self.start,
-            self.stop
+            self.end
         )
 
 def main():
