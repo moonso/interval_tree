@@ -85,10 +85,9 @@ class TestIntervalTree(object):
         """Test if tuples are compatible with interval trees."""
         assert set(self.tuple_tree.find_range([15,15])) == set(['id_08'])
 
-def main():
-    pass
+    def test_print_tree(self):
+        """Test if tuples are compatible with interval trees."""
+        print(self.tuple_tree)
+        assert True
 
-
-if __name__ == '__main__':
-    main()
 
