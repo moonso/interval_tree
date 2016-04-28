@@ -1,1 +1,1 @@
-from interval_tree import IntervalTree
+from .interval_tree import IntervalTree
