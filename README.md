@@ -1,4 +1,6 @@
-#Interval Tree#
+[![Build Status](https://travis-ci.org/moonso/interval_tree.svg)](https://travis-ci.org/moonso/interval_tree)
+
+# Interval Tree #
 
 Just a python implementation of interval tree.
 
